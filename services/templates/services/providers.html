@@ -1,0 +1,52 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Service Providers</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<div class="navbar">
+    <div class="logo">Service Providers</div>
+    <div class="nav-links">
+        <a href="/">Home</a>
+        <a href="#">Services</a>
+    </div>
+</div>
+
+<!-- PAGE CONTENT -->
+<div class="container">
+
+    {% if providers %}
+        {% for provider in providers %}
+            <div class="provider-card">
+                <h3>
+                    Category: {{ provider.category.name }}
+                </h3>
+
+                <p class="phone">
+                    <i class="fa-solid fa-phone"></i>
+                    {{ provider.phone }}
+                </p>
+            </div>
+        {% endfor %}
+    {% else %}
+        <div class="empty-box">
+            😔 No service providers available right now.
+        </div>
+    {% endif %}
+
+</div>
+
+</body>
+</html>
+

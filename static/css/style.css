@@ -1,0 +1,40 @@
+
+/* PROVIDER CARD */
+.provider-card {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.provider-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 18px rgba(0,0,0,0.15);
+}
+
+.provider-card h3 {
+    color: #0d6efd;
+    margin-bottom: 10px;
+}
+
+.phone {
+    font-size: 16px;
+    color: #333;
+}
+
+.phone i {
+    color: #0d6efd;
+    margin-right: 8px;
+}
+
+/* EMPTY DATA */
+.empty-box {
+    text-align: center;
+    padding: 40px;
+    background: #ffffff;
+    border-radius: 12px;
+    font-size: 18px;
+    color: #666;
+}
